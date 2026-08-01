@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Botão do tema -->
+<button onclick="darkmode()" id="theme-toggle" class="theme-button" type="button" aria-label="Alternar tema">
+    <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3
+                 7 7 0 0 0 21 12.79Z"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"/>
+    </svg>
+</button>
+
+<div class="container">
+
+    <div class="login-card">
+
+        <div class="logo">
+            <div class="logo-circle">L</div>
+
+            <h1>Bem-vindo</h1>
+            <p>Entre com sua conta</p>
+        </div>
+
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" id="email" placeholder="Digite seu email">
+            </div>
+
+            <div id="container-senha" class="input-group">
+                <label>Senha</label>
+                <input type="password" id="senha" placeholder="Digite sua senha">
+            </div>
+
+            <div class="options">
+
+                <label>
+                    <input type="checkbox">
+                    Lembrar-me
+                </label>
+
+                <a href="#">Esqueci a senha</a>
+
+            </div>
+
+            <button onclick="login(usuarios)" type="submit" class="login-button">
+                Entrar
+            </button>
+
+
+    </div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>

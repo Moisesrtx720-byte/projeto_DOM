@@ -1,0 +1,342 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",sans-serif;
+}
+
+body{
+
+    background:#F8FAFC;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    height:100vh;
+}
+
+.container{
+
+    width:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.login-card{
+
+    width:420px;
+
+    background:#FFF;
+
+    border-radius:18px;
+
+    padding:45px;
+
+    border:1px solid #E2E8F0;
+
+    box-shadow:
+        0 10px 40px rgba(15,23,42,.08);
+}
+
+.logo{
+
+    text-align:center;
+
+    margin-bottom:35px;
+}
+
+.logo-circle{
+
+    width:70px;
+    height:70px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:#EEF4FF;
+
+    color:#2563EB;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:28px;
+    font-weight:bold;
+
+    margin-bottom:18px;
+}
+
+.logo h1{
+
+    color:#1E293B;
+
+    margin-bottom:8px;
+
+    font-size:30px;
+}
+
+.logo p{
+
+    color:#64748B;
+}
+
+.input-group{
+
+    margin-bottom:22px;
+}
+
+.input-group label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    color:#334155;
+
+    font-size:14px;
+}
+
+.input-group input{
+
+    width:100%;
+
+    padding:15px;
+
+    border:1px solid #CBD5E1;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    transition:.25s;
+}
+
+.input-group input:focus{
+
+    outline:none;
+
+    border-color:#2563EB;
+
+    box-shadow:
+        0 0 0 4px rgba(37,99,235,.10);
+}
+
+.options{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+    font-size:14px;
+}
+
+.options label{
+
+    color:#475569;
+}
+
+.options a{
+
+    color:#2563EB;
+
+    text-decoration:none;
+}
+
+.options a:hover{
+
+    text-decoration:underline;
+}
+
+button{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#2563EB;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+button:hover{
+
+    background:#1D4ED8;
+
+    transform:translateY(-2px);
+}
+
+.theme-button{
+
+    position: fixed;
+
+    top: 24px;
+    right: 24px;
+
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #FFF;
+
+    color: #1E293B;
+
+    cursor: pointer;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,.12);
+
+    transition: .25s;
+}
+
+.theme-button:hover{
+
+    transform: scale(1.08);
+}
+
+.theme-button svg{
+
+    width: 22px;
+    height: 22px;
+}
+
+/* ===========================
+   TEMA ESCURO
+=========================== */
+
+body.dark{
+
+    background:#0F172A;
+
+    color:#F8FAFC;
+}
+
+/* Card */
+
+body.dark .login-card{
+
+    background:#1E293B;
+
+    border:1px solid #334155;
+
+    box-shadow:
+        0 10px 40px rgba(0,0,0,.45);
+}
+
+/* Logo */
+
+body.dark .logo-circle{
+
+    background:#1E3A8A;
+
+    color:#93C5FD;
+}
+
+body.dark .logo h1{
+
+    color:#F8FAFC;
+}
+
+body.dark .logo p{
+
+    color:#94A3B8;
+}
+
+/* Labels */
+
+body.dark .input-group label{
+
+    color:#CBD5E1;
+}
+
+/* Inputs */
+
+body.dark .input-group input{
+
+    background:#0F172A;
+
+    color:#F8FAFC;
+
+    border:1px solid #475569;
+}
+
+body.dark .input-group input::placeholder{
+
+    color:#94A3B8;
+}
+
+body.dark .input-group input:focus{
+
+    border-color:#3B82F6;
+
+    box-shadow:
+        0 0 0 4px rgba(59,130,246,.2);
+}
+
+/* Lembrar-me */
+
+body.dark .options label{
+
+    color:#CBD5E1;
+}
+
+/* Link */
+
+body.dark .options a{
+
+    color:#60A5FA;
+}
+
+body.dark .options a:hover{
+
+    color:#93C5FD;
+}
+
+/* Botão Entrar */
+
+body.dark .login-button{
+
+    background:#2563EB;
+}
+
+body.dark .login-button:hover{
+
+    background:#1D4ED8;
+}
+
+/* Botão do tema */
+
+body.dark .theme-button{
+
+    background:#1E293B;
+
+    color:#F8FAFC;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.45);
+}
