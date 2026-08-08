@@ -1,0 +1,428 @@
+const produtos = [
+    {
+        id: 1,
+        nome: "Bruschetta Italiana",
+        categoria: "entrada",
+        descricao: "Pão italiano, tomate fresco, manjericão e azeite de oliva.",
+        preco: 24.90,
+        imagem: "https://images.unsplash.com/photo-1541014741259-de529411b96a?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 2,
+        nome: "Salada Caesar",
+        categoria: "entrada",
+        descricao: "Alface crocante, frango grelhado, parmesão e molho Caesar.",
+        preco: 29.90,
+        imagem: "https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 3,
+        nome: "Pastéis da Casa",
+        categoria: "entrada",
+        descricao: "Porção com 6 pastéis recheados com sabores variados.",
+        preco: 22.90,
+        imagem: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 4,
+        nome: "Classic Burger",
+        categoria: "prato-principal",
+        descricao: "Pão brioche, hambúrguer artesanal, queijo, alface e tomate.",
+        preco: 32.90,
+        imagem: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 5,
+        nome: "Chicken Especial",
+        categoria: "prato-principal",
+        descricao: "Frango grelhado, arroz, legumes e molho especial da casa.",
+        preco: 38.90,
+        imagem: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 6,
+        nome: "Fettuccine Alfredo",
+        categoria: "prato-principal",
+        descricao: "Massa fresca com molho cremoso, parmesão e ervas.",
+        preco: 36.90,
+        imagem: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 7,
+        nome: "Refrigerante",
+        categoria: "bebida",
+        descricao: "Coca-Cola, Guaraná ou Fanta.",
+        preco: 7.00,
+        imagem: "https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 8,
+        nome: "Suco Natural",
+        categoria: "bebida",
+        descricao: "Laranja, maracujá, morango ou abacaxi.",
+        preco: 9.90,
+        imagem: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 9,
+        nome: "Combo Burger",
+        categoria: "combo",
+        descricao: "Hambúrguer artesanal, batata frita e refrigerante.",
+        preco: 44.90,
+        imagem: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 10,
+        nome: "Combo Família",
+        categoria: "combo",
+        descricao: "3 hambúrgueres, batata grande e 3 refrigerantes.",
+        preco: 89.90,
+        imagem: "https://images.unsplash.com/photo-1565299507177-b0ac66763828?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 11,
+        nome: "Cheesecake",
+        categoria: "sobremesa",
+        descricao: "Cheesecake cremoso com calda de frutas vermelhas.",
+        preco: 18.90,
+        imagem: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 12,
+        nome: "Sorvete Especial",
+        categoria: "sobremesa",
+        descricao: "Duas bolas de sorvete com cobertura e frutas.",
+        preco: 15.90,
+        imagem: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 13,
+        nome: "Batata Frita",
+        categoria: "porcao",
+        descricao: "Batatas crocantes acompanhadas de molho especial.",
+        preco: 24.90,
+        imagem: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        id: 14,
+        nome: "Chicken Wings",
+        categoria: "porcao",
+        descricao: "Asinhas de frango crocantes com molho barbecue.",
+        preco: 34.90,
+        imagem: "https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=600&q=80"
+    }
+];
+
+
+function carregarEntradas(produtos) {
+    produtos.map((produto) => {
+        if (produto.categoria === "entrada") {
+            let div = document.querySelector("#products-entrada")
+            div.innerHTML += `
+
+<article class="food-card">
+
+    <div class="food-card-image">
+        <img
+            src="${produto.imagem}"
+            alt="Classic Burger"
+        >
+    </div>
+
+    <div class="food-card-content">
+
+        <div class="food-card-top">
+            <h3>${produto.nome}</h3>
+
+            <span class="food-card-rating">
+                ★ 4.9
+            </span>
+        </div>
+
+        <p class="food-card-description">
+            ${produto.descricao}
+        </p>
+
+        <div class="food-card-bottom">
+
+            <span class="food-card-price">
+                R$ ${produto.preco}
+            </span>
+
+            <button class="food-card-button">
+                <span>+</span>
+            </button>
+
+        </div>
+
+    </div>
+
+</article>
+            `
+        }
+    })
+
+
+}
+
+function carregarPrincipal(produtos) {
+    produtos.map((produto) => {
+        if (produto.categoria === "prato-principal") {
+            let div = document.querySelector("#products-prato-principal")
+            div.innerHTML += `
+
+<article class="food-card">
+
+    <div class="food-card-image">
+        <img
+            src="${produto.imagem}"
+            alt="Classic Burger"
+        >
+    </div>
+
+    <div class="food-card-content">
+
+        <div class="food-card-top">
+            <h3>${produto.nome}</h3>
+
+            <span class="food-card-rating">
+                ★ 4.9
+            </span>
+        </div>
+
+        <p class="food-card-description">
+            ${produto.descricao}
+        </p>
+
+        <div class="food-card-bottom">
+
+            <span class="food-card-price">
+                R$ ${produto.preco}
+            </span>
+
+            <button class="food-card-button">
+                <span>+</span>
+            </button>
+
+        </div>
+
+    </div>
+
+</article>
+            `
+        }
+    })
+
+
+}
+
+function carregarBebidas(produtos) {
+    produtos.map((produto) => {
+        if (produto.categoria === "bebida") {
+            let div = document.querySelector("#products-bebida")
+            div.innerHTML += `
+
+<article class="food-card">
+
+    <div class="food-card-image">
+        <img
+            src="${produto.imagem}"
+            alt="Classic Burger"
+        >
+    </div>
+
+    <div class="food-card-content">
+
+        <div class="food-card-top">
+            <h3>${produto.nome}</h3>
+
+            <span class="food-card-rating">
+                ★ 4.9
+            </span>
+        </div>
+
+        <p class="food-card-description">
+            ${produto.descricao}
+        </p>
+
+        <div class="food-card-bottom">
+
+            <span class="food-card-price">
+                R$ ${produto.preco}
+            </span>
+
+            <button class="food-card-button">
+                <span>+</span>
+            </button>
+
+        </div>
+
+    </div>
+
+</article>
+            `
+        }
+    })
+
+
+}
+
+function carregarCombos(produtos) {
+    produtos.map((produto) => {
+        if (produto.categoria === "combo") {
+            let div = document.querySelector("#products-combo")
+            div.innerHTML += `
+
+<article class="food-card">
+
+    <div class="food-card-image">
+        <img
+            src="${produto.imagem}"
+            alt="Classic Burger"
+        >
+    </div>
+
+    <div class="food-card-content">
+
+        <div class="food-card-top">
+            <h3>${produto.nome}</h3>
+
+            <span class="food-card-rating">
+                ★ 4.9
+            </span>
+        </div>
+
+        <p class="food-card-description">
+            ${produto.descricao}
+        </p>
+
+        <div class="food-card-bottom">
+
+            <span class="food-card-price">
+                R$ ${produto.preco}
+            </span>
+
+            <button class="food-card-button">
+                <span>+</span>
+            </button>
+
+        </div>
+
+    </div>
+
+</article>
+            `
+        }
+    })
+
+
+}
+
+function carregarSobremesas(produtos) {
+    produtos.map((produto) => {
+        if (produto.categoria === "sobremesa") {
+            let div = document.querySelector("#products-sobremesa")
+            div.innerHTML += `
+
+<article class="food-card">
+
+    <div class="food-card-image">
+        <img
+            src="${produto.imagem}"
+            alt="Classic Burger"
+        >
+    </div>
+
+    <div class="food-card-content">
+
+        <div class="food-card-top">
+            <h3>${produto.nome}</h3>
+
+            <span class="food-card-rating">
+                ★ 4.9
+            </span>
+        </div>
+
+        <p class="food-card-description">
+            ${produto.descricao}
+        </p>
+
+        <div class="food-card-bottom">
+
+            <span class="food-card-price">
+                R$ ${produto.preco}
+            </span>
+
+            <button class="food-card-button">
+                <span>+</span>
+            </button>
+
+        </div>
+
+    </div>
+
+</article>
+            `
+        }
+    })
+
+
+}
+
+function carregarPorcoes(produtos) {
+    produtos.map((produto) => {
+        if (produto.categoria === "porcao") {
+            let div = document.querySelector("#products-porcao")
+            div.innerHTML += `
+
+<article class="food-card">
+
+    <div class="food-card-image">
+        <img
+            src="${produto.imagem}"
+            alt="Classic Burger"
+        >
+    </div>
+
+    <div class="food-card-content">
+
+        <div class="food-card-top">
+            <h3>${produto.nome}</h3>
+
+            <span class="food-card-rating">
+                ★ 4.9
+            </span>
+        </div>
+
+        <p class="food-card-description">
+            ${produto.descricao}
+        </p>
+
+        <div class="food-card-bottom">
+
+            <span class="food-card-price">
+                R$ ${produto.preco}
+            </span>
+
+            <button class="food-card-button">
+                <span>+</span>
+            </button>
+
+        </div>
+
+    </div>
+
+</article>
+            `
+        }
+    })
+
+
+}
+
+carregarEntradas(produtos)
+carregarPrincipal(produtos)
+carregarBebidas(produtos)
+carregarCombos(produtos)
+carregarSobremesas(produtos)
+carregarPorcoes(produtos)

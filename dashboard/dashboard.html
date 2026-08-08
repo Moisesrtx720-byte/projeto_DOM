@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cardápio Online</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <!-- MENU LATERAL -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <div class="logo-icon">🍔</div>
+                <div>
+                    <h1>Food<span>Menu</span></h1>
+                    <p>Cardápio online</p>
+                </div>
+            </div>
+
+            <nav class="category-menu">
+
+                <a href="#entradas" class="category active">
+                    <span class="category-icon">🥗</span>
+                    <span>Entradas</span>
+                </a>
+
+                <a href="#pratos" class="category">
+                    <span class="category-icon">🍽️</span>
+                    <span>Prato Principal</span>
+                </a>
+
+                <a href="#bebidas" class="category">
+                    <span class="category-icon">🥤</span>
+                    <span>Bebidas</span>
+                </a>
+
+                <a href="#combos" class="category">
+                    <span class="category-icon">🍔</span>
+                    <span>Combo</span>
+                </a>
+
+                <a href="#sobremesas" class="category">
+                    <span class="category-icon">🍰</span>
+                    <span>Sobremesa</span>
+                </a>
+
+                <a href="#porcoes" class="category">
+                    <span class="category-icon">🍟</span>
+                    <span>Porções</span>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>© 2026 FoodMenu</p>
+            </div>
+
+        </aside>
+
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="content">
+
+            <!-- HEADER -->
+            <header class="header">
+
+                <div class="restaurant-info">
+
+                    <span class="status">
+                        <span class="status-dot"></span>
+                        Aberto agora
+                    </span>
+
+                    <h2>Nosso Cardápio</h2>
+
+                    <p>
+                        Escolha seus pratos favoritos e faça seu pedido.
+                    </p>
+
+                </div>
+
+                <button class="cart-button">
+                    🛒
+                    <span>Meu pedido</span>
+                    <strong>0</strong>
+                </button>
+
+            </header>
+
+
+            <!-- =========================
+         ENTRADAS
+    ========================== -->
+
+            <section class="product-section" id="entradas">
+
+                <div class="section-title">
+
+                    <h2>Entradas</h2>
+
+                    <p>
+                        Para começar bem
+                    </p>
+
+                </div>
+
+                <div class="products" id="products-entrada"></div>
+
+            </section>
+
+
+            <!-- =========================
+         PRATO PRINCIPAL
+    ========================== -->
+
+            <section class="product-section" id="prato-principal">
+
+                <div class="section-title">
+
+                    <h2>Prato Principal</h2>
+
+                    <p>
+                        Os favoritos da casa
+                    </p>
+
+                </div>
+
+                <div class="products" id="products-prato-principal"></div>
+
+            </section>
+
+
+            <!-- =========================
+         BEBIDAS
+    ========================== -->
+
+            <section class="product-section" id="bebidas">
+
+                <div class="section-title">
+
+                    <h2>Bebidas</h2>
+
+                    <p>
+                        Para acompanhar
+                    </p>
+
+                </div>
+
+                <div class="products" id="products-bebida"></div>
+
+            </section>
+
+
+            <!-- =========================
+         COMBOS
+    ========================== -->
+
+            <section class="product-section" id="combos">
+
+                <div class="section-title">
+
+                    <h2>Combos</h2>
+
+                    <p>
+                        Mais comida, melhor preço
+                    </p>
+
+                </div>
+
+                <div class="products" id="products-combo"></div>
+
+            </section>
+
+
+            <!-- =========================
+         SOBREMESAS
+    ========================== -->
+
+            <section class="product-section" id="sobremesas">
+
+                <div class="section-title">
+
+                    <h2>Sobremesas</h2>
+
+                    <p>
+                        Um doce para finalizar
+                    </p>
+
+                </div>
+
+                <div class="products" id="products-sobremesa"></div>
+
+            </section>
+
+
+            <!-- =========================
+         PORÇÕES
+    ========================== -->
+
+            <section class="product-section" id="porcoes">
+
+                <div class="section-title">
+
+                    <h2>Porções</h2>
+
+                    <p>
+                        Perfeitas para compartilhar
+                    </p>
+
+                </div>
+
+                <div class="products" id="products-porcao"></div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>

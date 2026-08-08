@@ -340,3 +340,7 @@ body.dark .theme-button{
     box-shadow:
         0 10px 25px rgba(0,0,0,.45);
 }
+
+.erro{
+    color: red;
+}

@@ -89,6 +89,15 @@ const usuarios = [
     cargo: "Usuário",
     ativo: true,
   },
+  {
+    id: 11,
+    nome: "Fernanda Rocha",
+    email: "moisesrtx720@gmail.com",
+    senha: "123",
+    idade: 30,
+    cargo: "Usuário",
+    ativo: true,
+  },
 ];
 
 function darkmode() {
@@ -105,21 +114,17 @@ function login(usuarios) {
     let usuarioEncontrado = usuarios.find((usuario) => email === usuario.email && senha === usuario.senha)
     
     if (usuarioEncontrado === undefined){
-        let containerSenha = document.querySelector("#container-senha")
-        let p = document.createElement("p")
+        let p = document.querySelector("#mensagem-erro")
         p.innerText = "Usuário não encontrado"
-        containerSenha.appendChild(p)
+        p.classList.add("erro")
         return
         
     }
 
-    window.location.href="https://www.google.com/"
+    window.location.href="../dashboard/dashboard.html"
 
+}
 
-
-
-
-
-
-    
+function name(params) {
+  
 }
