@@ -713,3 +713,578 @@ body {
         font-size: 18px;
     }
 }
+/* =========================
+   HEADER ACTIONS
+========================= */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+/* BOTÃO ADICIONAR PRODUTO */
+
+.add-product-button {
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 0 16px;
+
+    border: 1px solid #ff5a36;
+    border-radius: 10px;
+
+    background: #fff;
+    color: #ff5a36;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.add-product-button span {
+    font-size: 22px;
+    line-height: 1;
+}
+
+.add-product-button:hover {
+    background: #ff5a36;
+    color: #fff;
+}
+
+
+/* CARRINHO */
+
+.cart-button {
+    height: 46px;
+
+    border: none;
+
+    background: #fff;
+
+    padding: 12px 16px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+.cart-button strong {
+    width: 22px;
+    height: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ff5a36;
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 11px;
+}
+
+/* =========================
+   MODAL OVERLAY
+========================= */
+
+.modal-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 9999;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.product-modal {
+    width: 100%;
+    max-width: 600px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
+
+    animation: modal-open 0.2s ease;
+}
+
+
+/* =========================
+   ANIMAÇÃO
+========================= */
+
+@keyframes modal-open {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.modal-header {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    padding: 25px 28px 20px;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.modal-header h2 {
+    margin: 0;
+
+    color: #1c1c1c;
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.modal-header p {
+    margin-top: 6px;
+
+    color: #999;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   CLOSE
+========================= */
+
+.modal-close {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    background: #f5f5f5;
+
+    border-radius: 9px;
+
+    color: #555;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.modal-close:hover {
+    background: #eeeeee;
+
+    color: #222;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.product-form {
+    padding: 25px 28px 28px;
+}
+
+
+/* =========================
+   FORM GROUP
+========================= */
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    color: #333;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+
+    width: 100%;
+
+    border: 1px solid #dedede;
+
+    border-radius: 9px;
+
+    background: #fff;
+
+    color: #222;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s ease;
+}
+
+.form-group input,
+.form-group select {
+    height: 44px;
+
+    padding: 0 13px;
+}
+
+.form-group textarea {
+    min-height: 100px;
+
+    padding: 12px 13px;
+
+    resize: vertical;
+}
+
+
+/* FOCUS */
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+
+    border-color: #ff5a36;
+
+    box-shadow: 0 0 0 3px rgba(255, 90, 54, 0.10);
+}
+
+
+/* =========================
+   DUAS COLUNAS
+========================= */
+
+.form-row {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+
+/* =========================
+   IMAGEM
+========================= */
+
+.image-input {
+    position: relative;
+
+    height: 100px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 2px dashed #ddd;
+
+    border-radius: 10px;
+
+    background: #fafafa;
+
+    color: #999;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.image-input:hover {
+    border-color: #ff5a36;
+
+    background: #fff8f5;
+
+    color: #ff5a36;
+}
+
+.image-input input {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.modal-footer {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #eeeeee;
+}
+
+
+/* =========================
+   BOTÕES
+========================= */
+
+.button-cancel,
+.button-save {
+
+    height: 44px;
+
+    padding: 0 18px;
+
+    border-radius: 9px;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.button-cancel {
+
+    border: 1px solid #ddd;
+
+    background: #fff;
+
+    color: #555;
+}
+
+.button-cancel:hover {
+    background: #f5f5f5;
+}
+
+
+.button-save {
+
+    border: none;
+
+    background: #ff5a36;
+
+    color: #fff;
+}
+
+.button-save:hover {
+    background: #e94b29;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .modal-overlay {
+        padding: 15px;
+    }
+
+    .product-modal {
+        max-height: 95vh;
+
+        border-radius: 15px;
+    }
+
+    .modal-header {
+        padding: 20px;
+    }
+
+    .product-form {
+        padding: 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .modal-footer {
+        flex-direction: column-reverse;
+    }
+
+    .button-cancel,
+    .button-save {
+        width: 100%;
+    }
+
+}
+
+
+
+/* =========================
+   CONTEÚDO DO MODAL
+========================= */
+
+.product-form {
+    padding: 25px 28px 28px;
+}
+
+
+/* =========================
+   IMAGEM
+========================= */
+
+.image-input {
+    position: relative;
+
+    height: 110px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px dashed #ddd;
+    border-radius: 12px;
+
+    background: #fafafa;
+    color: #999;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.image-input:hover {
+    border-color: #ff5a36;
+    background: #fff8f5;
+    color: #ff5a36;
+}
+
+.image-input span {
+    pointer-events: none;
+}
+
+.image-input input {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .product-form {
+        padding: 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .modal-footer {
+        flex-direction: column-reverse;
+    }
+
+    .button-cancel,
+    .button-save {
+        width: 100%;
+    }
+
+}

@@ -426,3 +426,222 @@ carregarBebidas(produtos)
 carregarCombos(produtos)
 carregarSobremesas(produtos)
 carregarPorcoes(produtos)
+
+function carregarFormularioProdutos() {
+    let button = document.querySelector("#add-product-button")
+    let body = document.querySelector("body")
+    body.innerHTML += `<!-- MODAL -->
+<div class="modal-overlay" id="product-modal">
+
+    <div class="product-modal">
+
+        <!-- HEADER -->
+        <div class="modal-header">
+
+            <div>
+                <h2>Cadastrar produto</h2>
+                <p>Adicione um novo produto ao cardápio.</p>
+            </div>
+
+            <button
+                type="button"
+                class="modal-close"
+                onclick="closeModal()"
+                aria-label="Fechar modal"
+            >
+                &times;
+            </button>
+
+        </div>
+
+
+        <!-- CONTEÚDO -->
+        <div class="product-form">
+
+            <!-- NOME -->
+            <div class="form-group">
+
+                <label for="product-name">
+                    Nome do produto
+                </label>
+
+                <input
+                    type="text"
+                    id="product-name"
+                    placeholder="Ex: Hambúrguer artesanal"
+                >
+
+            </div>
+
+
+            <!-- DESCRIÇÃO -->
+            <div class="form-group">
+
+                <label for="product-description">
+                    Descrição
+                </label>
+
+                <textarea
+                    id="product-description"
+                    placeholder="Descreva o produto..."
+                ></textarea>
+
+            </div>
+
+
+            <!-- PREÇO + CATEGORIA -->
+            <div class="form-row">
+
+                <!-- PREÇO -->
+                <div class="form-group">
+
+                    <label for="product-price">
+                        Preço
+                    </label>
+
+                    <input
+                        type="number"
+                        id="product-price"
+                        placeholder="0,00"
+                        step="0.01"
+                        min="0"
+                    >
+
+                </div>
+
+
+                <!-- CATEGORIA -->
+                <div class="form-group">
+
+                    <label for="product-category">
+                        Categoria
+                    </label>
+
+                    <select id="product-category">
+
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        <option value="entrada">
+                            Entradas
+                        </option>
+
+                        <option value="prato-principal">
+                            Prato Principal
+                        </option>
+
+                        <option value="bebida">
+                            Bebidas
+                        </option>
+
+                        <option value="combo">
+                            Combos
+                        </option>
+
+                        <option value="sobremesa">
+                            Sobremesas
+                        </option>
+
+                        <option value="porcao">
+                            Porções
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- IMAGEM -->
+            <div class="form-group">
+
+                <label for="product-image">
+                    Imagem do produto
+                </label>
+                    <input
+                        type="text"
+                        id="product-image"
+                        
+                    >
+            </div>
+
+
+            <!-- FOOTER -->
+            <div class="modal-footer">
+
+                <button
+                    type="button"
+                    class="button-cancel"
+                    onclick="closeModal()"
+                >
+                    Cancelar
+                </button>
+
+                <button
+                    type="button"
+                    class="button-save"
+                    onclick="cadastrarProduto(produtos)"
+                >
+                    Cadastrar produto
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>`
+}
+
+function closeModal() {
+    let modal = document.querySelector("#product-modal")
+    let body = document.querySelector("body")
+    body.removeChild(modal)
+
+}
+
+function cadastrarProduto(produtos) {
+    let name = document.querySelector("#product-name").value
+    let descricao = document.querySelector("#product-description").value
+    let preco = document.querySelector("#product-price").value
+    let categoria = document.querySelector("#product-category").value
+    let image = document.querySelector("#product-image").value
+
+    let divPrincipal = document.querySelector("#products-prato-principal")
+    let divEntrada = document.querySelector("#products-entrada")
+    let divBebida = document.querySelector("#products-bebida")
+    let divCombo = document.querySelector("#products-combo")
+    let divSobremesa = document.querySelector("#products-sobremesa")
+    let divPorcao = document.querySelector("#products-porcao")
+    
+    let novoProduto = {
+        id:produtos.length + 1,
+        nome:name,
+        categoria:categoria,
+        descricao:descricao,
+        preco:preco,
+        imagem:image
+    }
+    
+    produtos.push(novoProduto)
+
+    divPrincipal.innerHTML = ""
+    divBebida.innerHTML = ""
+    divEntrada.innerHTML = ""
+    divCombo.innerHTML = ""
+    divSobremesa.innerHTML = ""
+    divPorcao.innerHTML = ""
+
+    carregarEntradas(produtos)
+    carregarPrincipal(produtos)
+    carregarBebidas(produtos)
+    carregarCombos(produtos)
+    carregarSobremesas(produtos)
+    carregarPorcoes(produtos)
+
+    closeModal()
+
+}

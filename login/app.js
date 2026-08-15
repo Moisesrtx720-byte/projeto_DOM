@@ -125,6 +125,3 @@ function login(usuarios) {
 
 }
 
-function name(params) {
-  
-}
