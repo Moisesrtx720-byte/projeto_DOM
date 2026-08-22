@@ -118,14 +118,12 @@ function carregarEntradas(produtos) {
     produtos.map((produto) => {
         if (produto.categoria === "entrada") {
             let div = document.querySelector("#products-entrada")
-            div.innerHTML += `
-
-<article class="food-card">
+            div.innerHTML += `<article class="food-card" data-id="${produto.id}">
 
     <div class="food-card-image">
         <img
             src="${produto.imagem}"
-            alt="Classic Burger"
+            alt="${produto.nome}"
         >
     </div>
 
@@ -149,9 +147,39 @@ function carregarEntradas(produtos) {
                 R$ ${produto.preco}
             </span>
 
-            <button class="food-card-button">
-                <span>+</span>
-            </button>
+            <!-- NOVO: Container de ações -->
+            <div class="food-card-actions">
+                
+                <!-- Botão Editar -->
+                <button 
+                    class="food-card-action edit-action" 
+                    onclick="editarProduto(${produto.id})"
+                    aria-label="Editar produto"
+                    title="Editar"
+                >
+                    ✏️
+                </button>
+
+                <!-- Botão Deletar -->
+                <button 
+                    class="food-card-action delete-action" 
+                    onclick="deletarProduto(${produto.id})"
+                    aria-label="Deletar produto"
+                    title="Deletar"
+                >
+                    🗑️
+                </button>
+
+                <!-- Botão Adicionar (seu botão original) -->
+                <button 
+                    class="food-card-button" 
+                    onclick=""
+                    aria-label="Adicionar ao carrinho"
+                >
+                    <span>+</span>
+                </button>
+
+            </div>
 
         </div>
 
@@ -200,9 +228,39 @@ function carregarPrincipal(produtos) {
                 R$ ${produto.preco}
             </span>
 
-            <button class="food-card-button">
-                <span>+</span>
-            </button>
+<!-- NOVO: Container de ações -->
+            <div class="food-card-actions">
+                
+                <!-- Botão Editar -->
+                <button 
+                    class="food-card-action edit-action" 
+                    onclick="editarProduto(${produto.id})"
+                    aria-label="Editar produto"
+                    title="Editar"
+                >
+                    ✏️
+                </button>
+
+                <!-- Botão Deletar -->
+                <button 
+                    class="food-card-action delete-action" 
+                    onclick="deletarProduto(${produto.id})"
+                    aria-label="Deletar produto"
+                    title="Deletar"
+                >
+                    🗑️
+                </button>
+
+                <!-- Botão Adicionar (seu botão original) -->
+                <button 
+                    class="food-card-button" 
+                    onclick=""
+                    aria-label="Adicionar ao carrinho"
+                >
+                    <span>+</span>
+                </button>
+
+            </div>
 
         </div>
 
@@ -251,9 +309,39 @@ function carregarBebidas(produtos) {
                 R$ ${produto.preco}
             </span>
 
-            <button class="food-card-button">
-                <span>+</span>
-            </button>
+<!-- NOVO: Container de ações -->
+            <div class="food-card-actions">
+                
+                <!-- Botão Editar -->
+                <button 
+                    class="food-card-action edit-action" 
+                    onclick="editarProduto(${produto.id})"
+                    aria-label="Editar produto"
+                    title="Editar"
+                >
+                    ✏️
+                </button>
+
+                <!-- Botão Deletar -->
+                <button 
+                    class="food-card-action delete-action" 
+                    onclick="deletarProduto(${produto.id})"
+                    aria-label="Deletar produto"
+                    title="Deletar"
+                >
+                    🗑️
+                </button>
+
+                <!-- Botão Adicionar (seu botão original) -->
+                <button 
+                    class="food-card-button" 
+                    onclick=""
+                    aria-label="Adicionar ao carrinho"
+                >
+                    <span>+</span>
+                </button>
+
+            </div>
 
         </div>
 
@@ -302,9 +390,39 @@ function carregarCombos(produtos) {
                 R$ ${produto.preco}
             </span>
 
-            <button class="food-card-button">
-                <span>+</span>
-            </button>
+<!-- NOVO: Container de ações -->
+            <div class="food-card-actions">
+                
+                <!-- Botão Editar -->
+                <button 
+                    class="food-card-action edit-action" 
+                    onclick="editarProduto(${produto.id})"
+                    aria-label="Editar produto"
+                    title="Editar"
+                >
+                    ✏️
+                </button>
+
+                <!-- Botão Deletar -->
+                <button 
+                    class="food-card-action delete-action" 
+                    onclick="deletarProduto(${produto.id})"
+                    aria-label="Deletar produto"
+                    title="Deletar"
+                >
+                    🗑️
+                </button>
+
+                <!-- Botão Adicionar (seu botão original) -->
+                <button 
+                    class="food-card-button" 
+                    onclick=""
+                    aria-label="Adicionar ao carrinho"
+                >
+                    <span>+</span>
+                </button>
+
+            </div>
 
         </div>
 
@@ -353,9 +471,39 @@ function carregarSobremesas(produtos) {
                 R$ ${produto.preco}
             </span>
 
-            <button class="food-card-button">
-                <span>+</span>
-            </button>
+<!-- NOVO: Container de ações -->
+            <div class="food-card-actions">
+                
+                <!-- Botão Editar -->
+                <button 
+                    class="food-card-action edit-action" 
+                    onclick="editarProduto(${produto.id})"
+                    aria-label="Editar produto"
+                    title="Editar"
+                >
+                    ✏️
+                </button>
+
+                <!-- Botão Deletar -->
+                <button 
+                    class="food-card-action delete-action" 
+                    onclick="deletarProduto(${produto.id})"
+                    aria-label="Deletar produto"
+                    title="Deletar"
+                >
+                    🗑️
+                </button>
+
+                <!-- Botão Adicionar (seu botão original) -->
+                <button 
+                    class="food-card-button" 
+                    onclick=""
+                    aria-label="Adicionar ao carrinho"
+                >
+                    <span>+</span>
+                </button>
+
+            </div>
 
         </div>
 
@@ -404,9 +552,39 @@ function carregarPorcoes(produtos) {
                 R$ ${produto.preco}
             </span>
 
-            <button class="food-card-button">
-                <span>+</span>
-            </button>
+<!-- NOVO: Container de ações -->
+            <div class="food-card-actions">
+                
+                <!-- Botão Editar -->
+                <button 
+                    class="food-card-action edit-action" 
+                    onclick="editarProduto(${produto.id})"
+                    aria-label="Editar produto"
+                    title="Editar"
+                >
+                    ✏️
+                </button>
+
+                <!-- Botão Deletar -->
+                <button 
+                    class="food-card-action delete-action" 
+                    onclick="deletarProduto(${produto.id})"
+                    aria-label="Deletar produto"
+                    title="Deletar"
+                >
+                    🗑️
+                </button>
+
+                <!-- Botão Adicionar (seu botão original) -->
+                <button 
+                    class="food-card-button" 
+                    onclick=""
+                    aria-label="Adicionar ao carrinho"
+                >
+                    <span>+</span>
+                </button>
+
+            </div>
 
         </div>
 
@@ -426,6 +604,7 @@ carregarBebidas(produtos)
 carregarCombos(produtos)
 carregarSobremesas(produtos)
 carregarPorcoes(produtos)
+
 
 function carregarFormularioProdutos() {
     let button = document.querySelector("#add-product-button")
@@ -600,7 +779,6 @@ function closeModal() {
     let modal = document.querySelector("#product-modal")
     let body = document.querySelector("body")
     body.removeChild(modal)
-
 }
 
 function cadastrarProduto(produtos) {
@@ -608,32 +786,33 @@ function cadastrarProduto(produtos) {
     let descricao = document.querySelector("#product-description").value
     let preco = document.querySelector("#product-price").value
     let categoria = document.querySelector("#product-category").value
-    let image = document.querySelector("#product-image").value
+    let imagem = document.querySelector("#product-image").value
+
 
     let divPrincipal = document.querySelector("#products-prato-principal")
     let divEntrada = document.querySelector("#products-entrada")
-    let divBebida = document.querySelector("#products-bebida")
+    let divBebidas = document.querySelector("#products-bebida")
     let divCombo = document.querySelector("#products-combo")
-    let divSobremesa = document.querySelector("#products-sobremesa")
     let divPorcao = document.querySelector("#products-porcao")
-    
+    let divSobremesa = document.querySelector("#products-sobremesa")
+
     let novoProduto = {
-        id:produtos.length + 1,
-        nome:name,
-        categoria:categoria,
-        descricao:descricao,
-        preco:preco,
-        imagem:image
+        id: produtos.length + 1,
+        nome: name,
+        categoria: categoria,
+        descricao: descricao,
+        preco: preco,
+        imagem: imagem,
     }
-    
+
     produtos.push(novoProduto)
 
     divPrincipal.innerHTML = ""
-    divBebida.innerHTML = ""
     divEntrada.innerHTML = ""
+    divBebidas.innerHTML = ""
     divCombo.innerHTML = ""
-    divSobremesa.innerHTML = ""
     divPorcao.innerHTML = ""
+    divSobremesa.innerHTML = ""
 
     carregarEntradas(produtos)
     carregarPrincipal(produtos)
@@ -643,5 +822,280 @@ function cadastrarProduto(produtos) {
     carregarPorcoes(produtos)
 
     closeModal()
-
 }
+
+
+function deletarProduto(id) {
+    let index = produtos.findIndex((produto) => produto.id === id ) 
+    let produto = produtos.find((produto) => produto.id === id ) 
+    let divEntrada = document.querySelector("#products-entrada")
+    let divPrincipal = document.querySelector("#products-prato-principal")
+    let divBebida = document.querySelector("#products-bebida")
+    let divCombo = document.querySelector("#products-combo")
+    let divSobremesa = document.querySelector("#products-sobremesa")
+    let divPorcao = document.querySelector("#products-porcao")
+
+    if(produto.categoria === "entrada"){
+        produtos.splice(index, 1)
+        divEntrada.innerHTML = ""
+        carregarEntradas(produtos)
+    }
+    if(produto.categoria === "prato-principal"){
+        produtos.splice(index, 1)
+        divPrincipal.innerHTML = ""
+        carregarPrincipal(produtos)
+    }
+    if(produto.categoria === "bebida"){
+        produtos.splice(index, 1)
+        divBebida.innerHTML = ""
+        carregarBebidas(produtos)
+    }
+    if(produto.categoria === "combo"){
+        produtos.splice(index, 1)
+        divCombo.innerHTML = ""
+        carregarCombos(produtos)
+    }
+    if(produto.categoria === "sobremesa"){
+        produtos.splice(index, 1)
+        divSobremesa.innerHTML = ""
+        carregarSobremesas(produtos)
+    }
+    if(produto.categoria === "porcao"){
+        produtos.splice(index, 1)
+        divPorcao.innerHTML = ""
+        carregarPorcoes(produtos)
+    }
+}
+
+function editarProduto(id) {
+    let produto = produtos.find((produto) => produto.id === id)
+    let body = document.querySelector("body")
+
+    body.innerHTML += `<!-- MODAL -->
+<div class="modal-overlay" id="product-modal">
+
+    <div class="product-modal">
+
+        <!-- HEADER -->
+        <div class="modal-header">
+
+            <div>
+                <h2>Editar produto</h2>
+                <p>Adicione um novo produto ao cardápio.</p>
+            </div>
+
+            <button
+                type="button"
+                class="modal-close"
+                onclick="closeModal()"
+                aria-label="Fechar modal"
+            >
+                &times;
+            </button>
+
+        </div>
+
+
+        <!-- CONTEÚDO -->
+        <div class="product-form">
+
+            <!-- NOME -->
+            <div class="form-group">
+
+                <label for="product-name">
+                    Nome do produto
+                </label>
+
+                <input
+                    type="text"
+                    id="product-name"
+                    placeholder="Ex: Hambúrguer artesanal"
+                    value="${produto.nome}"
+                >
+
+            </div>
+
+
+            <!-- DESCRIÇÃO -->
+            <div class="form-group">
+
+                <label for="product-description">
+                    Descrição
+                </label>
+
+                <textarea
+                    id="product-description"
+                    placeholder="Descreva o produto..."
+                    
+                ></textarea>
+
+            </div>
+
+
+            <!-- PREÇO + CATEGORIA -->
+            <div class="form-row">
+
+                <!-- PREÇO -->
+                <div class="form-group">
+
+                    <label for="product-price">
+                        Preço
+                    </label>
+
+                    <input
+                        type="number"
+                        id="product-price"
+                        placeholder="0,00"
+                        step="0.01"
+                        min="0"
+                        value="${produto.preco}"
+                    >
+
+                </div>
+
+
+                <!-- CATEGORIA -->
+                <div class="form-group" >
+
+                    <label for="product-category">
+                        Categoria
+                    </label>
+
+                    <select id="product-category" >
+
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        <option value="entrada">
+                            Entradas
+                        </option>
+
+                        <option value="prato-principal">
+                            Prato Principal
+                        </option>
+
+                        <option value="bebida">
+                            Bebidas
+                        </option>
+
+                        <option value="combo">
+                            Combos
+                        </option>
+
+                        <option value="sobremesa">
+                            Sobremesas
+                        </option>
+
+                        <option value="porcao">
+                            Porções
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- IMAGEM -->
+            <div class="form-group">
+
+                <label for="product-image">
+                    Imagem do produto
+                </label>
+                    <input
+                        type="text"
+                        id="product-image"
+                        value="${produto.imagem}"
+                    >
+            </div>
+
+
+            <!-- FOOTER -->
+            <div class="modal-footer">
+
+                <button
+                    type="button"
+                    class="button-cancel"
+                    onclick="closeModal()"
+                >
+                    Cancelar
+                </button>
+
+                <button
+                    type="button"
+                    class="button-save"
+                    onclick="editar(${id})"
+                >
+                    Editar produto
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    </div>`
+    document.querySelector("#product-description").value = `${produto.descricao}`
+    document.querySelector("#product-category").value = `${produto.categoria}`
+}
+
+function editar(id) {
+    let index = produtos.findIndex((produto) => produto.id === id)
+    let name = document.querySelector("#product-name").value
+    let descricao = document.querySelector("#product-description").value
+    let preco = document.querySelector("#product-price").value
+    let categoria = document.querySelector("#product-category").value
+    let imagem = document.querySelector("#product-image").value
+
+    produtos[index] = {
+        id: id,
+        nome: name,
+        categoria: categoria,
+        descricao: descricao,
+        preco: preco,
+        imagem: imagem
+    }
+
+    let divEntrada = document.querySelector("#products-entrada")
+    let divPrincipal = document.querySelector("#products-prato-principal")
+    let divBebida = document.querySelector("#products-bebida")
+    let divCombo = document.querySelector("#products-combo")
+    let divSobremesa = document.querySelector("#products-sobremesa")
+    let divPorcao = document.querySelector("#products-porcao")
+    let produto = produtos.find((produto) => produto.id === id)
+
+
+    if(produto.categoria === "entrada"){
+        divEntrada.innerHTML = ""
+        carregarEntradas(produtos)
+    }
+    if(produto.categoria === "prato-principal"){
+        divPrincipal.innerHTML = ""
+        carregarPrincipal(produtos)
+    }
+    if(produto.categoria === "bebida"){
+        divBebida.innerHTML = ""
+        carregarBebidas(produtos)
+    }
+    if(produto.categoria === "combo"){
+        divCombo.innerHTML = ""
+        carregarCombos(produtos)
+    }
+    if(produto.categoria === "sobremesa"){
+        divSobremesa.innerHTML = ""
+        carregarSobremesas(produtos)
+    }
+    if(produto.categoria === "porcao"){
+        divPorcao.innerHTML = ""
+        carregarPorcoes(produtos)
+    }
+
+    closeModal()
+}
+
+
+
+

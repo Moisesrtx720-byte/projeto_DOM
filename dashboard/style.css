@@ -1288,3 +1288,129 @@ body {
     }
 
 }
+
+/* =========================
+   FOOD CARD ACTIONS
+========================= */
+
+.food-card-actions {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.food-card-action {
+    width: 38px;
+    height: 38px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+/* BOTÃO EDITAR */
+
+.edit-action {
+    background: #f0f4ff;
+    color: #4a6cf7;
+}
+
+.edit-action:hover {
+    background: #dce4ff;
+    transform: scale(1.08);
+}
+
+/* BOTÃO DELETAR */
+
+.delete-action {
+    background: #fff0ee;
+    color: #e74c3c;
+}
+
+.delete-action:hover {
+    background: #ffe0dc;
+    transform: scale(1.08);
+}
+
+/* BOTÃO ADICIONAR (seu botão original adaptado) */
+
+.food-card-button {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #ff5a36;
+    color: #fff;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+
+    flex-shrink: 0;
+}
+
+.food-card-button span {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.food-card-button:hover {
+    background: #e94b29;
+    transform: scale(1.08);
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 600px) {
+    .food-card-actions {
+        gap: 4px;
+    }
+
+    .food-card-action {
+        width: 34px;
+        height: 34px;
+
+        font-size: 14px;
+    }
+
+    .food-card-button {
+        width: 34px;
+        height: 34px;
+    }
+
+    .food-card-button span {
+        font-size: 20px;
+    }
+}
+
+/* =========================
+   ANIMAÇÃO DE CLICK
+========================= */
+
+.food-card-action:active,
+.food-card-button:active {
+    transform: scale(0.92);
+}
